@@ -75,7 +75,7 @@ pip install opencv-python numpy scipy matplotlib pandas scikit-learn seaborn
 ## Known Issues
 
 - **ROC NaN at segment boundaries**: When videos from different periods are stitched together, the rate-of-change (ROC) at the 24h and 48h boundary points becomes NaN because the gradient is computed across a time discontinuity. Run `roc_nan_fix.py` to detect and repair this automatically.
-- **Template file**: On first run you will be prompted to draw a box around one indent region. This is saved as `indent_template_1.png` and reused on all subsequent runs. Delete it if you want to re-select.
+- **Template file**: On first run you will be prompted to draw a box around one indent region. This is saved as `indent_template_1.png` and reused on all subsequent runs. Delete this file if you want to reselect the region or upload your own cropped indent separately, saving it as `indent_template_1.png`.
 - **ECC alignment failures**: Image alignment occasionally fails on very low-contrast frames. The script falls back to the unaligned frame — this is expected and printed as a warning.
 - **Accelerometer time sync**: The CSV timestamps are assumed to start at 0 for each recording period (i.e., second 0 of the CSV = `period_start` of that period). If your accelerometer clock does not reset between periods, adjust the `experiment_time` calculation in the loader.
 
