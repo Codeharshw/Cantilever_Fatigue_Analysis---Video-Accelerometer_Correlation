@@ -1,0 +1,54 @@
+# ─── Large data files ────────────────────────────────────────────────────────
+# Video files — often many GB each, do not commit
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# Raw accelerometer CSVs — comment out if you want to track your data files
+# *.csv
+
+# ─── Generated outputs from the pipeline ─────────────────────────────────────
+indent_*_analysis.png
+indent_*_correlation_plots.png
+indent_*_statistical_vector.npy
+indent_*_binned_features.npy
+indent_*_timeseries.csv
+indent_*_timeseries_fixed.csv
+indent_*_video_accel_combined.csv
+indent_*_correlations.json
+correlation_summary_all_indents.json
+final_summary_matrix.csv
+roc_diagnostic_summary.csv
+analysis_metadata.json
+
+# Indent template — regenerated on first run
+indent_template_1.png
+
+# ─── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg
+*.egg-info/
+dist/
+build/
+venv/
+env/
+.venv/
+.env/
+
+# ─── Jupyter ─────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ─── OS ──────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─── IDEs ────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
