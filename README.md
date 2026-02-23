@@ -29,8 +29,8 @@ This is why `fatigue_feature_extraction_from_mp4.py` supports a `is_part2` flag 
 |---|---|
 | `fatigue_feature_extraction_from_mp4.py` | Step 1 — Extract indent intensity features from MP4 videos |
 | `accelerometer_video_correlation.py` | Step 3 — Correlate video features with accelerometer data |
-| `roc_nan_fix.py` | Step 2 (if needed) — Diagnose and fix NaN values in ROC data |
-| `json_to_csv.py` | Step 4 — Convert correlation JSON summary to a matrix CSV |
+| `roc_nan_fix.py` | Step 2 (if needed) — Scans all `indent_*_timeseries.csv` files for NaN or zero-variance ROC values, recalculates ROC from scratch using numpy gradient, and saves corrected `_fixed.csv` files. NaNs typically appear at the 24h and 48h segment boundaries where the gradient is computed across a time gap between two different video files. |
+| `json_to_csv.py` | Step 4 — The correlation script produces one JSON file per indent. This utility merges all of them into a single matrix CSV where rows are feature pairs (e.g. "Intensity vs Bending RMS") and columns are indent numbers, making it easy to compare results across all indents at a glance in Excel or a notebook. |
 
 ---
 
